@@ -4,29 +4,28 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
     <LangVersion>9.0</LangVersion>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>BSLegacyUtil.pfx</AssemblyOriginatorKeyFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Version>2.12.2</Version>
-    <Authors>Lily</Authors>
-    <Company>Beat Saber Legacy Group</Company>
-    <Description>Beat Saber Downgrade Utility using Steam's DepotDownloader</Description>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Authors>ThaNightHawk (Origincal Source: MintLily and BSLegacy Group)</Authors>
+    <Company>BMLegacy</Company>
+    <Description>BMLegacy Downgrade utility using Steam's DepotDownloader</Description>
     <PackageIcon>logo.png</PackageIcon>
-    <RepositoryUrl>https://github.com/MintLily/BSLegacyUtil</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/BeamNG-Tools/BMLegacyUtil</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageId />
     <UseWindowsForms>True</UseWindowsForms>
-    <AssemblyVersion>2.12.2</AssemblyVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
     <StartupObject />
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
-    <PackageTags>steam;legacy;downgrade;downgrader;beat saber;depot downloader;</PackageTags>
-    <FileVersion>2.12.2</FileVersion>
+    <PackageTags>steam;legacy;downgrade;downgrader;beamgn;depot downloader;</PackageTags>
+    <FileVersion>1.0.0</FileVersion>
+    <DelaySign>False</DelaySign>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows|AnyCPU'">
-    <WarningLevel>5</WarningLevel>
+	<WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows|AnyCPU'">
@@ -52,5 +51,4 @@
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
-
 </Project>

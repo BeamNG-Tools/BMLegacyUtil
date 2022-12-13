@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSLegacyUtil", "BSLegacyUtil_CLI\BSLegacyUtil.csproj", "{F87C29C3-8251-4709-A237-AF3438B06A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BMLegacyUtil", "BMLegacyUtil_CLI\BMLegacyUtil.csproj", "{F87C29C3-8251-4709-A237-AF3438B06A21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
