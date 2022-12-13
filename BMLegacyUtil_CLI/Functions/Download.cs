@@ -21,7 +21,7 @@ namespace BMLegacyUtil.Functions {
 
     public class Download
     {
-        private static readonly string Jsonurl = "https://raw.githubusercontent.com/BeamNG-Tools/BMLegacyUtil/main/BSLegacyUtil_CLI/Resources/Versions.json";
+        private static readonly string Jsonurl = "https://raw.githubusercontent.com/BeamNG-Tools/BMLegacyUtil/main/BMLegacyUtil_CLI/Resources/Versions.json";
         private static string _manifestId = "";
         private static string _gameVersion = string.Empty;
         private static Process _download;

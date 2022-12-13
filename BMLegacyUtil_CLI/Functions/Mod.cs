@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using BSLegacyUtil.Utilities;
+using BMLegacyUtil.Utilities;
 using Microsoft.VisualBasic.FileIO;
-using static BSLegacyUtil.Program;
+using static BMLegacyUtil.Program;
 
-namespace BSLegacyUtil.Functions {
+namespace BMLegacyUtil.Functions {
     public class Mod {
         public static void ModGame(string gameVersion) {
             _gamePath = BuildInfo.IsWindows ? $"{Environment.CurrentDirectory}\\Beat Saber" : $"{AppDomain.CurrentDomain.BaseDirectory}Beat Saber";
