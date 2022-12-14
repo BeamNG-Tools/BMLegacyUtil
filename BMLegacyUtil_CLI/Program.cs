@@ -1,9 +1,12 @@
 ﻿using BMLegacyUtil.Functions;
+using BMLegacyUtil.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BMLegacyUtil {
@@ -15,7 +18,8 @@ namespace BMLegacyUtil {
         public static Version TargetDotNetVer = new("6.0.0");
     }
 
-    internal class Program {
+    internal class Program
+    {
 
         internal static string _steamUsername, _steamPassword;
         private static string _stepInput, _versionInput;
@@ -35,7 +39,23 @@ namespace BMLegacyUtil {
             Con.WriteLineCentered("Hiya, people!");
             Con.Space();
 
-            BeginInputOption();
+            var showError = false;
+            if (BuildInfo.IsWindows)
+            {
+                if (!Directory.Exists(Environment.CurrentDirectory + "\\Depotdownloader"))
+                    showError = true;
+            }
+            else
+            {
+                MessageBox.Show("Linux is not supported at this time.", "Unsupported OS", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
+            if (showError)
+            {
+                Con.Error("Please be sure you have extracted the files before running this!");
+                Con.Error("Program will not run until you have extracted all the contents out of the ZIP file.");
+                Con.Exit();
+            }
+            else BeginInputOption();
         }
 
         public static void BeginInputOption() {
@@ -124,17 +144,19 @@ namespace BMLegacyUtil {
 
             if (dlGame)
                 Download.DlGameAsync(_versionInput);
+            else
+                //nothing
+                Con.Log("Didn't download? - Contact Hawk");
         }
 
-        public static void InputSteamLogin() {
+        public static void InputSteamLogin()
+        {
             Con.Log("Steam Username", "(not display name)");
             Con.SteamUN();
             _steamUsername = Console.ReadLine();
             Con.Log("Steam Password");//, "(press enter once before you start typing)");
             Con.SteamPW();
             _steamPassword = Console.ReadLine();
-            
-            BeginInputOption();
         }
     }
 }

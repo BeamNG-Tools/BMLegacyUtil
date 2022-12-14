@@ -93,7 +93,7 @@ namespace BMLegacyUtil.Functions {
                 }
                 else {
                     _download = Process.Start("dotnet",
-                        $" \"{AppDomain.CurrentDomain.BaseDirectory}/Depotdownloader/DepotDownloader.dll\" -app 284160 -depot 28416 -manifest {_manifestId}" +
+                        $" \"{AppDomain.CurrentDomain.BaseDirectory}/Depotdownloader/DepotDownloader.dll\" -app 284160 -depot 284161 -manifest {_manifestId}" +
                         $" -username {_steamUsername} -password {_steamPassword} -dir \"BeamNG.drive\" -validate");
                 }
 
